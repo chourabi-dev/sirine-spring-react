@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: microservice-a
+          uri: http://localhost:9071
+          predicates:
+            - Path=/micro-service-a/**
+        - id: microservice-b
+          uri: http://localhost:9072
+          predicates:
+            - Path=/micro-service-b/**
